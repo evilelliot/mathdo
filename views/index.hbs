@@ -1,0 +1,43 @@
+<h1 class="text-center" id="animated"></h1>
+<hr>
+<div class="container">
+    <form method="POST" action="/evaluate/evaluate-expresion">
+        <div class="form-group">
+            <label for="ex">Expresion:</label>
+            <input type="text" name="expresion" class="form-control" id="ex" placeholder="ej: 2*x - 3*y + 2*z = 30" required>
+        </div>
+        <div class="form-group">
+            <label for="evalue">Valor esperado:</label>
+            <input type="text" name="evalue" class="form-control" id="evalue" placeholder="valor esperado" required>
+        </div>
+        <div class="form-group">
+            <label for="evalue">Limite minimo:</label>
+            <input type="text" name="min" class="form-control" id="min" placeholder="limite minimo" required>
+        </div>
+        <div class="form-group">
+            <label for="evalue">Limite maximo:</label>
+            <input type="text" name="max" class="form-control" id="max" placeholder="limite maximo" required>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-block btn-primary">Evaluar</button>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <hr>
+    <p><a href="/about">Acerca de Mathdo</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+<script>
+    new TypeIt('#animated', {
+        strings: ["¿Buscando variables?", "Mathdo"],
+        speed: 50,
+        waitUntilVisible: true
+    }).go();
+    new TypeIt('#ex', {
+        strings: "2*x - 3*y + 3*z",
+        speed: 100,
+        startDelay: 900
+    }).go();
+</script>
+

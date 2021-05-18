@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="text-center">Resultados</h1>
+    <hr>
+    <p><b>Mathdo</b> encontró <b>{{founded}}</b> resultados posibles para las variables de la expresion <i>{{expresion}}</i> utilizando el limite minimo de busqueda {{min}} y el limite maximo de busqueda {{max}}.</p>
+</div>
+<div class="container">
+    <table class="table table-bordered">
+    <tr class="thead-dark">
+        <th scope="col" class="text-center">Expresión</th>
+        <th scope="col" class="text-center">X</th>
+        <th scope="col" class="text-center">Y</th>
+        <th scope="col" class="text-center">Z</th>
+        <th scope="col" class="text-center">Resultado</th>
+    </tr>
+    {{#each data}}
+        <tr>
+            <td scope="row" class="text-center">{{this.exp}}</td>
+            <td scope="row" class="text-center">{{this.x}}</td>
+            <td scope="row" class="text-center">{{this.y}}</td>
+            <td scope="row" class="text-center">{{this.z}}</td>
+            <td scope="row" class="text-center">{{this.result}}</td>
+        </tr>  
+    {{/each}}
+    </table>
+    <hr>
+    <p><a href="/">Volver a la calculadora...</a></p>
+</div>
